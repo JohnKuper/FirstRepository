@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Push Git-a</title>
+    <title>Тайтл Push Git-a</title>
 </head>
 <body>
 
