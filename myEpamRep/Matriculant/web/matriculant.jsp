@@ -117,7 +117,7 @@
 
             <form action="/matriculant" method="GET" name="form">  <!-- style="font-family:helvetica">-->
                 <input type="hidden" name="command" value="" />
-                <h2 style = "color: blue"><center><i><strong>Сайт приемной комиссии</strong></i></center></h2>
+                <h2 style = "color: blue"><center><i><strong>Приемная комиссия</strong></i></center></h2>
 
                 <p><strong>Факультет</strong><br>
                     <select name="faculty">
