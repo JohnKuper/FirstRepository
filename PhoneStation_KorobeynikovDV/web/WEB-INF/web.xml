@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>AddNewSubscriberServlet</servlet-name>
+        <servlet-class>kuper.controller.AddNewSubscriberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateSubscriberServlet</servlet-name>
+        <servlet-class>kuper.controller.UpdateSubscriberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteSubscriberServlet</servlet-name>
+        <servlet-class>kuper.controller.DeleteSubscriberServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddNewSubscriberServlet</servlet-name>
+        <url-pattern>/AddNewSubscriberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateSubscriberServlet</servlet-name>
+        <url-pattern>/UpdateSubscriberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteSubscriberServlet</servlet-name>
+        <url-pattern>/DeleteSubscriberServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            10
+        </session-timeout>
+    </session-config>
+    <filter>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <filter-class>kuper.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>characterEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignoreClientEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <resource-ref>
+        <description>Phone Station Database</description>
+        <res-ref-name>jdbc/PhoneStationDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Wildcard means whole app requires authentication</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>manager-gui</role-name>
+        </auth-constraint>
+
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.html</form-login-page>
+            <form-error-page>/login-failed.html</form-error-page>
+        </form-login-config>
+    </login-config>
+   
+</web-app>

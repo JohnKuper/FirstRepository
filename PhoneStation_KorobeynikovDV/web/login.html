@@ -1,0 +1,28 @@
+<!--
+    Author     : Коробейников Дмитрий
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <form method="POST" action="j_security_check">
+            <div id="mystyle" class="myform">
+                <h1 align="center">Вход в систему</h1>
+                <p align="center">Пожалуйста введите имя пользователя и пароль администратора:</p>
+                <label>Имя пользователя<span class="small">Введите имя пользователя</span></label>
+                <input type="text" name="j_username" maxLength="20" />
+                <label>Пароль<span class="small">Введите пароль</span></label>
+                <input type="password" name="j_password" maxLength="15" />
+                <button type="submit">Вход</button>
+            </div>
+        </form>
+    </body>
+</html>

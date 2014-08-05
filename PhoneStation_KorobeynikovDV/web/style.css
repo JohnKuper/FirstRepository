@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Author     : Коробейников Дмитрий
+*/
+/*стили для проекта*/
+root { 
+    display: ruby;    
+}
+/*общий фон*/
+body{
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    background: gainsboro;
+}
+/*обтекание для кнопки*/ 
+.spacer{clear:both; height:1px;}
+/*таблица результатов*/
+table, tr, td{
+    border-radius: 5px;
+    border:solid 1px black;
+    padding: 5px;    
+    width: max-content;
+    background-color: inactiveborder;
+ 
+}
+ 
+.myform{
+margin:0 auto;
+width:400px;
+padding:14px;
+}
+ 
+ /*фон хэдера и форм для заполнения*/
+#mystyle{
+border:solid 2px black;
+background: white;
+border-radius: 2px;
+}
+#mystyle h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+}
+#mystyle p{
+font-size:11px;
+color:#666666;
+margin-bottom:20px;
+border-bottom:solid 1px black;
+padding-bottom:10px;
+}
+#mystyle label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+}
+#mystyle .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+#mystyle input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px black;
+width:200px;
+margin:2px 0 20px 10px;
+border-radius: 5px;
+}
+#mystyle button{
+clear:both;
+margin-left:150px;
+width:125px;
+height:31px;
+background:#666666;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:12px;
+font-weight:bold;
+border-radius: 5px;
+}
+
